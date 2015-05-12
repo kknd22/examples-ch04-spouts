@@ -1,58 +1,74 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>storm.book</groupId>
-  <artifactId>Spouts</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  
-  	
-  <build>
-   <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>2.3.2</version>
-        <configuration>
-          <source>1.6</source>
-          <target>1.6</target>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>storm.book</groupId>
+    <artifactId>Spouts</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
 
-  <repositories>
-        
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+
+        <repository>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>central</id>
+            <url>http://repo1.maven.org/maven2/</url>
+        </repository>
         <!-- Repository where we can found the storm dependencies  -->
         <repository>
             <id>clojars.org</id>
             <url>http://clojars.org/repo</url>
         </repository>
 
-  </repositories>
+    </repositories>
 
-  <dependencies>
+    <dependencies>
 
         <!-- Storm Dependency -->
         <dependency>
-          <groupId>storm</groupId>
-          <artifactId>storm</artifactId>
-          <version>0.7.1</version>
-       </dependency>
+            <groupId>org.apache.storm</groupId>
+            <artifactId>storm-core</artifactId>
+            <version>0.9.4</version>
+        </dependency>
 
         <dependency>
-        	<groupId>commons-http</groupId>
-        	<artifactId>commons-http</artifactId>
-        	<version>1.1</version>
-        	<type>jar</type>
-        	<scope>compile</scope>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.4.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-http</groupId>
+            <artifactId>commons-http</artifactId>
+            <version>1.1</version>
+            <type>jar</type>
+            <scope>compile</scope>
         </dependency>
         <dependency>
-        	<groupId>redis.clients</groupId>
-        	<artifactId>jedis</artifactId>
-        	<version>2.0.0</version>
-        	<type>jar</type>
-        	<scope>compile</scope>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>2.0.0</version>
+            <type>jar</type>
+            <scope>compile</scope>
         </dependency>
-  </dependencies>
+    </dependencies>
 
-  
+
 </project>
